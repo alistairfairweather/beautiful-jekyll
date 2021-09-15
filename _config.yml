@@ -7,6 +7,7 @@
 
 # Name of website
 title: My Website
+remote_theme: daattali/beautiful-jekyll@5.0.0
 
 # Your name to show in the footer
 author: Some Person
