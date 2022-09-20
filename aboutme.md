@@ -1,9 +1,8 @@
 ---
 layout: page
 title: About me
-subtitle: This is a HubSpot testing area
+subtitle: Why you'd want to go on a date with me
 ---
-
 
 <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/v2.js"></script>
 <script>
