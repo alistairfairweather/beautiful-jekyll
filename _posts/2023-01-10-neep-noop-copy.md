@@ -14,7 +14,7 @@ Hello there!
 
 ---
 
-<a href="#" id="datalayerLink">Push to dataLayer</a>
+<a href="#pop">Push to dataLayer</a>
 
 <script>
   // Wait until the DOM is fully loaded.
