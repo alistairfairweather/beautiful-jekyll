@@ -14,6 +14,9 @@ Hello there!
 
 ---
 
+<a href="#" id="datalayerLink">Push to dataLayer</a>
+
+
 adkjcbasjfwdkjf wekjfe 
 cew ckjnckjewqc
 
