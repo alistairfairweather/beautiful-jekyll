@@ -4,9 +4,13 @@ title: CSS Selector test
 subtitle: Testing page
 ---
 
-
 <style>
-        .menu-button {
+        .menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .menu .menu-button {
             display: block;
             margin: 10px;
             padding: 10px;
@@ -18,19 +22,17 @@ subtitle: Testing page
         }
     </style>
 
-<div>
-        <a id="button1" href="https://example.com" class="menu-button">Click Me</a>
+<div class="menu">
+   <a id="button1" href="https://example.com" class="menu-button">Click Me</a>
     </div>
-<div>
+<div class="menu">
         <a data-button="3" href="https://example.com">Click Me</a>
     </div>
-<div>
+<div class="menu">
         <a class="quack" href="https://example.com">Click Me</a>
 </div>
-<div>
-        <div class="parent">
+<div class="quack">
             <a href="https://example.com">Click Me</a>
-        </div>
 </div> 
  
  
