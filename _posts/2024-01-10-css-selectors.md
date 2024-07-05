@@ -4,7 +4,8 @@ title: CSS Selector test
 subtitle: Testing page
 ---
 
-    <style>
+
+<style>
         .menu-button {
             display: block;
             margin: 10px;
@@ -17,19 +18,19 @@ subtitle: Testing page
         }
     </style>
 
-    <div>
+<div>
         <a id="button1" href="https://example.com" class="menu-button">Click Me</a>
     </div>
-    <div>
-        <a class="button2" href="https://example.com" class="menu-button">Click Me</a>
+<div>
+        <a data-button="3" href="https://example.com">Click Me</a>
     </div>
-    <div>
-        <a href="https://example.com" class="menu-button" data-button="3">Click Me</a>
-    </div>
-    <div>
+<div>
+        <a class="quack" href="https://example.com">Click Me</a>
+</div>
+<div>
         <div class="parent">
-            <a href="https://example.com" class="menu-button">Click Me</a>
+            <a href="https://example.com">Click Me</a>
         </div>
-    </div> 
+</div> 
  
  
