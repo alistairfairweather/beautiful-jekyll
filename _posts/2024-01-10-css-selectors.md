@@ -10,7 +10,14 @@ subtitle: Testing page
             flex-direction: column;
             align-items: center;
         }
-        .menu .menu-button {
+        
+        .quack {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        a {
             display: block;
             margin: 10px;
             padding: 10px;
