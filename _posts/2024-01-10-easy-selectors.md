@@ -1,7 +1,7 @@
 ---
 layout: post
-title: CSS Selector test
-subtitle: Testing page
+title: Simpler Selectors for Simps and Inspectors
+subtitle: Simple CSS tester
 ---
 
 
