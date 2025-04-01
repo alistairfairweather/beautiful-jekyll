@@ -85,6 +85,28 @@
   {% if site.title %}
   <meta property="og:site_name" content="{{ site.title }}">
   {% endif %}
+<script>
+  (function() {
+  // Define the regex to match any of the desired bot identifiers
+  const regex = /Mozilla|OAI-SearchBot|ChatGPT-User|GPTBot/;
+
+  // Check if the current user agent matches the regex
+  if (regex.test(navigator.userAgent)) {
+    fetch('https://silent-bird-0d0b.alistair-2bd.workers.dev/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ action: 'recordUserAgent' })
+    })
+    .then(response => response.text())
+    .then(data => console.log("Worker response:", data))
+    .catch(error => console.error("Error:", error));
+  }
+})();
+
+</script>
+
 
   {%- capture img -%}
     {%- if page.share-img -%}
@@ -149,10 +171,3 @@
     {% endfor %}
   {% endif %}
 
-<script>
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-'event' : 'KBcategory',
-'KBcategory' : 'case-studies'
-})
-</script>
