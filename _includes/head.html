@@ -28,30 +28,22 @@
 
   <script>
     (function() {
-      console.log("Script is running");
+      console.log("Script executed");
+      console.log("User Agent:", navigator.userAgent);
       
-      // Define the regex to match any of the desired bot identifiers
       const regex = /Mozilla|OAI-SearchBot|ChatGPT-User|GPTBot/;
-    
-      // Log the user agent for debugging
-      console.log("User agent:", navigator.userAgent);
-      
-      // Check if the current user agent matches the regex
       if (regex.test(navigator.userAgent)) {
-        console.log("User agent matches regex, proceeding with fetch");
-        
+        console.log("Regex matched, proceeding with fetch");
         fetch('https://silent-bird-0d0b.alistair-2bd.workers.dev/', {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ action: 'recordUserAgent' })
         })
         .then(response => response.text())
         .then(data => console.log("Worker response:", data))
         .catch(error => console.error("Error:", error));
       } else {
-        console.log("User agent does not match regex");
+        console.log("User agent did not match regex");
       }
     })();
   </script>
